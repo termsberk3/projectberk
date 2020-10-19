@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e102efbc-29e7-4466-8155-97a06e1a8d00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dashboard/ForgotPassword.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dashboard/ForgotStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dashboard/MainPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dashboard/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LoginPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LoginStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Dashboard/AddGroup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Dashboard/AddGroupStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dashboard/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dashboard/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dashboard/MainPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +19,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -111,8 +103,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603098837572</updated>
-      <workItem from="1603098840357" duration="27610000" />
+      <workItem from="1603098840357" duration="37932000" />
+      <workItem from="1603138225040" duration="1864000" />
     </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <created>1603126516523</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603126516523</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,13 +124,23 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1603126515468">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603126515468" />
     <state x="634" y="300" key="Github.ShareDialog" timestamp="1603099716346">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -138,10 +149,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="399" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603118328770" />
-    <state x="452" y="128" width="631" height="568" key="find.popup" timestamp="1603125264325">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1603126523843">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="452" y="128" width="631" height="568" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1603125264325" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603126523843" />
+    <state x="452" y="128" width="631" height="568" key="find.popup" timestamp="1603135263115">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="452" y="128" width="631" height="568" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1603135263115" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1603122594707">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

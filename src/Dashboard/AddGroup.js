@@ -23,7 +23,10 @@ import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import SettingsIcon from '@material-ui/icons/Settings';
 import { grey } from '@material-ui/core/colors';
 import InputBase from "@material-ui/core/InputBase";
-import SearchIcon from '@material-ui/icons/Search';
+import FormControl from "@material-ui/core/FormControl";
+import InputLabel from "@material-ui/core/InputLabel";
+import Input from "@material-ui/core/Input";
+import Button from "@material-ui/core/Button";
 
 const drawerWidth = 240;
 
@@ -200,18 +203,18 @@ export default function MainPage() {
                 </div>
                 <Divider />
                 <List>
-                        <ListItem button >
-                                <ListItemIcon>
-                                    <PeopleIcon />
-                                </ListItemIcon>
-                                <ListItemText primary="User Groups" />
-                        </ListItem>
-                    <a href={"/AddGroup"}>
                     <ListItem button >
                         <ListItemIcon>
-                            <GroupAddIcon />
+                            <PeopleIcon />
                         </ListItemIcon>
-                        <ListItemText primary="Add Group" />
+                        <ListItemText primary="User Groups" />
+                    </ListItem>
+                    <a href={"/AddGroup"}>
+                        <ListItem button >
+                            <ListItemIcon>
+                                <GroupAddIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Add Group" />
                         </ListItem>
                     </a>
                     <ListItem button>
@@ -259,10 +262,31 @@ export default function MainPage() {
                 })}
             >
                 <div className={classes.drawerHeader} />
-                <div className={classes.search}>
-                    <Typography>
-                        This is the main page of the application. You can view the actions you can take from the sidebar menu. This page is only informational.
-                    </Typography>
+                <div className="Login">
+                    <header className="Login-header">
+                        <FormControl className="form">
+                            <InputLabel htmlFor="my-input">Group Name</InputLabel>
+                            <Input type={"text"} id="my-input" aria-describedby="my-helper-text" />
+                        </FormControl>
+                        <FormControl  className="form">
+                            <InputLabel htmlFor="my-input">User Name</InputLabel>
+                            <Input type={"text"} id="my-input" aria-describedby="my-helper-text" />
+                        </FormControl>
+                        <FormControl  className="form">
+                            <InputLabel htmlFor="my-input">Password</InputLabel>
+                            <Input  id="my-input" type={"password"} aria-describedby="my-helper-text" />
+                        </FormControl>
+                        <FormControl  className="form">
+                            <InputLabel htmlFor="my-input">E-mail</InputLabel>
+                            <Input  id="my-input" type={"text"} aria-describedby="my-helper-text" />
+                        </FormControl>
+                        <br/>
+                        <div id="container">
+                            <div>
+                                <Button className="button"> Add Group </Button>
+                            </div>
+                        </div>
+                    </header>
                 </div>
             </main>
         </div>

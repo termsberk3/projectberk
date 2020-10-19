@@ -4,9 +4,10 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Input from '@material-ui/core/Input';
 import FormHelperText from '@material-ui/core/FormHelperText';
-import { BrowserRouter as Router, Route, Switch, Link, RouteComponentProps } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, RouteComponentProps } from "react-router-dom";
 import Forgot from "./Dashboard/ForgotPassword";
 import MainPage from "./Dashboard/MainPage";
+import Button from "@material-ui/core/Button";
 
 interface Props extends RouteComponentProps {}
 
@@ -26,7 +27,7 @@ export const Login: React.FC<Props> = () => {
                 <Router>
                     <div id="container">
                         <div>
-                            <FormHelperText id="my-helper-text"> <Link to="/MainPage">Login</Link> </FormHelperText>
+                            <Button className="button"> <a href={"/MainPage"}>Login</a> </Button>
                         </div>
                         <Switch>
                             <Route exact path="/ForgotPassword" component={Forgot} />
@@ -37,7 +38,7 @@ export const Login: React.FC<Props> = () => {
                 <Router>
                     <div id="container">
                         <div>
-                            <FormHelperText id="my-helper-text">Forgot your password? you can click <Link to="/ForgotPassword">here</Link> </FormHelperText>
+                            <FormHelperText id="my-helper-text">Forgot your password? you can click <a href={"/ForgotPassword"}>here</a> </FormHelperText>
                         </div>
                         <Switch>
                             <Route exact path="/ForgotPassword" component={Forgot} />
@@ -48,7 +49,6 @@ export const Login: React.FC<Props> = () => {
             </header>
         </div>
     );
-
 }
 
 export default Login;
