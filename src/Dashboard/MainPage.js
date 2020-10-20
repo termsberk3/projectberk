@@ -22,8 +22,6 @@ import GroupAddIcon from '@material-ui/icons/GroupAdd';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import SettingsIcon from '@material-ui/icons/Settings';
 import { grey } from '@material-ui/core/colors';
-import InputBase from "@material-ui/core/InputBase";
-import SearchIcon from '@material-ui/icons/Search';
 
 const drawerWidth = 240;
 
@@ -249,7 +247,8 @@ export default function MainPage() {
                     >
                         <MenuItem onClick={handleClose}>Profile</MenuItem>
                         <MenuItem onClick={handleClose}>My account</MenuItem>
-                        <MenuItem onClick={handleClose}>Languages</MenuItem>
+                        <MenuItem onClick={handleClose}><a href={"/"}>LogOut</a></MenuItem>
+
                     </Menu>
                 </div>
             </Drawer>

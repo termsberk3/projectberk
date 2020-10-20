@@ -1,54 +1,83 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './LoginStyle.css';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Input from '@material-ui/core/Input';
 import FormHelperText from '@material-ui/core/FormHelperText';
-import { BrowserRouter as Router, Route, Switch, RouteComponentProps } from "react-router-dom";
-import Forgot from "./Dashboard/ForgotPassword";
-import MainPage from "./Dashboard/MainPage";
 import Button from "@material-ui/core/Button";
+import { useHistory } from "react-router-dom";
 
-interface Props extends RouteComponentProps {}
 
-export const Login: React.FC<Props> = () => {
-    return (
-        <div className="Login">
+
+const LoginPage  = () => {
+
+    const [emailInput, setEmailInput] = useState('');
+    const [passwordInput, setPasswordInput] = useState('');
+
+    const history = useHistory();
+
+    const handleEmailChange = (e) => {
+        setEmailInput(e.target.value);
+    }
+
+    const handlePasswordChange = (e) => {
+        setPasswordInput(e.target.value);
+    }
+
+    const handleLoginSubmit = (e) => {
+        e.preventDefault();
+        let hardcodedCred = {
+            email: 'asd@asd',
+            password: 'asd123'
+        }
+
+        if ((emailInput === hardcodedCred.email) && (passwordInput === hardcodedCred.password)) {
+            //combination is good. Log them in.
+            //this token can be anything. You can use random.org to generate a random string;
+            const token = '123456abcdef';
+            sessionStorage.setItem('auth-token', token);
+            history.push('/MainPage');
+        } else {
+            //bad combination
+            alert('wrong email or password combination');
+        }
+    }
+    return(
+        <div  className="Login">
             <header className="Login-header">
-                <FormControl className="form">
-                    <InputLabel htmlFor="my-input">Admin ID</InputLabel>
-                    <Input id="my-input" aria-describedby="my-helper-text" />
+                <form  onSubmit={handleLoginSubmit}>
+                <FormControl  className="form">
+                    <InputLabel htmlFor="my-input">E-mail</InputLabel>
+                    <Input type="email"
+                           name="email"
+                           placeholder="Email"
+                           value={emailInput}
+                           onChange={handleEmailChange}
+                           required id="my-input" aria-describedby="my-helper-text" />
                 </FormControl>
+                    <br/>
                 <FormControl  className="form">
                     <InputLabel htmlFor="my-input">Password</InputLabel>
-                    <Input id="my-input" type={"password"} aria-describedby="my-helper-text" />
+                    <Input type="password"
+                           name="password"
+                           value={passwordInput}
+                           onChange={handlePasswordChange}
+                           placeholder="Password"
+                           required id="my-input"  aria-describedby="my-helper-text" />
                 </FormControl>
+                    <br/>
+                    <Button type="submit" className="button"> Login  </Button>
+                </form>
                 <br/>
-                <Router>
-                    <div id="container">
-                        <div>
-                            <Button className="button"> <a href={"/MainPage"}>Login</a> </Button>
-                        </div>
-                        <Switch>
-                            <Route exact path="/ForgotPassword" component={Forgot} />
-                            <Route exact path="/MainPage" component={MainPage} />
-                        </Switch>
-                    </div>
-                </Router>
-                <Router>
+
                     <div id="container">
                         <div>
                             <FormHelperText id="my-helper-text">Forgot your password? you can click <a href={"/ForgotPassword"}>here</a> </FormHelperText>
                         </div>
-                        <Switch>
-                            <Route exact path="/ForgotPassword" component={Forgot} />
-                            <Route exact path="/MainPage" component={MainPage} />
-                        </Switch>
                     </div>
-                </Router>
             </header>
         </div>
-    );
+    )
 }
 
-export default Login;
+export default LoginPage;
