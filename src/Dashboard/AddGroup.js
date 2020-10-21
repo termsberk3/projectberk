@@ -209,13 +209,13 @@ export default function MainPage() {
                         </ListItemIcon>
                         <ListItemText primary="User Groups" />
                     </ListItem>
-                    <a href={"/AddGroup"}>
-                        <ListItem button >
-                            <ListItemIcon>
-                                <GroupAddIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Add Group" />
-                        </ListItem>
+                    <a href={"/MainPage"}>
+                    <ListItem button >
+                        <ListItemIcon>
+                            <PeopleIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Back to MainPage" />
+                    </ListItem>
                     </a>
                     <ListItem button>
                         <ListItemIcon>
@@ -252,7 +252,7 @@ export default function MainPage() {
                     >
                         <MenuItem onClick={handleClose}>Profile</MenuItem>
                         <MenuItem onClick={handleClose}>My account</MenuItem>
-                        <MenuItem onClick={handleClose}>Languages</MenuItem>
+                        <a href={"/"}> <MenuItem onClick={handleClose}>LogOut</MenuItem></a>
                     </Menu>
                 </div>
             </Drawer>

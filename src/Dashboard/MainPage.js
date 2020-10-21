@@ -247,7 +247,7 @@ export default function MainPage() {
                     >
                         <MenuItem onClick={handleClose}>Profile</MenuItem>
                         <MenuItem onClick={handleClose}>My account</MenuItem>
-                        <MenuItem onClick={handleClose}><a href={"/"}>LogOut</a></MenuItem>
+                        <a href={"/"}> <MenuItem onClick={handleClose}>LogOut</MenuItem></a>
 
                     </Menu>
                 </div>
