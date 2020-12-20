@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e102efbc-29e7-4466-8155-97a06e1a8d00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dashboard/AddGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dashboard/AddGroup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dashboard/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dashboard/MainPage.js" afterDir="false" />
     </list>
@@ -102,7 +103,12 @@
       <workItem from="1603098840357" duration="37932000" />
       <workItem from="1603138225040" duration="2092000" />
       <workItem from="1603188565727" duration="16685000" />
-      <workItem from="1603277630576" duration="1274000" />
+      <workItem from="1603277630576" duration="1360000" />
+      <workItem from="1603436387165" duration="68000" />
+      <workItem from="1607078403994" duration="182000" />
+      <workItem from="1607082048666" duration="139000" />
+      <workItem from="1608460477162" duration="8037000" />
+      <workItem from="1608469634952" duration="612000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1603126516523</created>
@@ -125,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603208030999</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Editing README.md file and applying a little fix">
+      <created>1603278953413</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603278953413</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,21 +161,22 @@
     <MESSAGE value="First Commit" />
     <MESSAGE value="Mainpage is added and add group page added for view, other pages can be added upon request" />
     <MESSAGE value="Login Function is added for simple use" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login Function is added for simple use" />
+    <MESSAGE value="Editing README.md file and applying a little fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Editing README.md file and applying a little fix" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603206296764">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608468909638">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1603206296764" />
-    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1603208029998">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1608468909638" />
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1603278952224">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603208029998" />
-    <state x="147" y="65" key="DiffContextDialog" timestamp="1603140296182">
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603278952224" />
+    <state x="147" y="65" width="1228" height="687" key="DiffContextDialog" timestamp="1608462615312">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="147" y="65" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1603140296182" />
+    <state x="147" y="65" width="1228" height="687" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1608462615312" />
     <state x="634" y="300" key="Github.ShareDialog" timestamp="1603099716346">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -171,10 +185,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="399" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603118328770" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1603208034721">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1603278959302">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603208034721" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603278959302" />
     <state x="452" y="128" width="631" height="568" key="find.popup" timestamp="1603202753744">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -22,6 +22,7 @@ import GroupAddIcon from '@material-ui/icons/GroupAdd';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import SettingsIcon from '@material-ui/icons/Settings';
 import { grey } from '@material-ui/core/colors';
+import {Helmet} from "react-helmet";
 
 const drawerWidth = 240;
 
@@ -158,7 +159,12 @@ export default function MainPage() {
 
 
     return (
+
         <div className={classes.root}>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Main Page</title>
+            </Helmet>
             <CssBaseline />
             <AppBar
                 position="fixed"
@@ -198,6 +204,14 @@ export default function MainPage() {
                 </div>
                 <Divider />
                 <List>
+                    <a href={"/MainPage"}>
+                    <ListItem button >
+                        <ListItemIcon>
+                            <PeopleIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Main Page" />
+                    </ListItem>
+                    </a>
                         <ListItem button >
                                 <ListItemIcon>
                                     <PeopleIcon />
@@ -258,12 +272,8 @@ export default function MainPage() {
                 })}
             >
                 <div className={classes.drawerHeader} />
-                <div className={classes.search}>
-                    <Typography>
-                        This is the main page of the application. You can view the actions you can take from the sidebar menu. This page is only informational.
-                    </Typography>
-                </div>
             </main>
+
         </div>
     );
 }

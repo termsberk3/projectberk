@@ -1,32 +1,12 @@
 import React from 'react';
 import clsx from 'clsx';
 import { fade,makeStyles, useTheme } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import PeopleIcon from '@material-ui/icons/People';
-import GroupAddIcon from '@material-ui/icons/GroupAdd';
-import PersonAddIcon from '@material-ui/icons/PersonAdd';
-import SettingsIcon from '@material-ui/icons/Settings';
-import { grey } from '@material-ui/core/colors';
-import InputBase from "@material-ui/core/InputBase";
 import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
 import Button from "@material-ui/core/Button";
+import MainPage from "./MainPage";
+import {Helmet} from "react-helmet";
 
 const drawerWidth = 240;
 
@@ -137,7 +117,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function MainPage() {
+export default function AddGroup() {
     const classes = useStyles();
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
@@ -145,150 +125,47 @@ export default function MainPage() {
     const menuOpen = Boolean(anchorEl);
 
 
-    const handleDrawerOpen = () => {
-        setOpen(true);
-    };
-
-    const handleDrawerClose = () => {
-        setOpen(false);
-    };
-
-    const handleMenuOpen = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
-
 
     return (
         <div className={classes.root}>
-            <CssBaseline />
-            <AppBar
-                position="fixed"
-                className={clsx(classes.appBar, {
-                    [classes.appBarShift]: open,
-                })}
-            >
-                <Toolbar className={classes.toolbar}>
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        onClick={handleDrawerOpen}
-                        edge="start"
-                        className={clsx(classes.menuButton, open && classes.hide)}
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography className={classes.title} variant="h6" noWrap>
-                        DT Brain
-                    </Typography>
-                </Toolbar>
-            </AppBar>
-            <Drawer
-                className={classes.drawer}
-                variant="persistent"
-                anchor="left"
-                open={open}
-                classes={{
-                    paper: classes.drawerPaper,
-                }}
-            >
-                <h2>Welcome, Admin</h2>
-                <div className={classes.drawerHeader}>
-                    <IconButton onClick={handleDrawerClose}>
-                        {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-                    </IconButton>
-                </div>
-                <Divider />
-                <List>
-                    <ListItem button >
-                        <ListItemIcon>
-                            <PeopleIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="User Groups" />
-                    </ListItem>
-                    <a href={"/MainPage"}>
-                    <ListItem button >
-                        <ListItemIcon>
-                            <PeopleIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Back to MainPage" />
-                    </ListItem>
-                    </a>
-                    <ListItem button>
-                        <ListItemIcon>
-                            <PersonAddIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Add Person" />
-                    </ListItem>
-                </List>
-                <Divider />
-                <div>
-                    <IconButton
-                        aria-label="account of current user"
-                        aria-controls="menu-appbar"
-                        aria-haspopup="true"
-                        onClick={handleMenuOpen}
-                        color="inherit"
-                    >
-                        <SettingsIcon style={{ color: grey[500] }} />
-                    </IconButton>
-                    <Menu
-                        id="menu-appbar"
-                        anchorEl={anchorEl}
-                        anchorOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
-                        }}
-                        keepMounted
-                        transformOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
-                        }}
-                        open={menuOpen}
-                        onClose={handleClose}
-                    >
-                        <MenuItem onClick={handleClose}>Profile</MenuItem>
-                        <MenuItem onClick={handleClose}>My account</MenuItem>
-                        <a href={"/"}> <MenuItem onClick={handleClose}>LogOut</MenuItem></a>
-                    </Menu>
-                </div>
-            </Drawer>
-            <main
-                className={clsx(classes.content, {
-                    [classes.contentShift]: open,
-                })}
-            >
-                <div className={classes.drawerHeader} />
-                <div className="Login">
-                    <header className="Login-header">
-                        <FormControl className="form">
-                            <InputLabel htmlFor="my-input">Group Name</InputLabel>
-                            <Input type={"text"} id="my-input" aria-describedby="my-helper-text" />
-                        </FormControl>
-                        <FormControl  className="form">
-                            <InputLabel htmlFor="my-input">User Name</InputLabel>
-                            <Input type={"text"} id="my-input" aria-describedby="my-helper-text" />
-                        </FormControl>
-                        <FormControl  className="form">
-                            <InputLabel htmlFor="my-input">Password</InputLabel>
-                            <Input  id="my-input" type={"password"} aria-describedby="my-helper-text" />
-                        </FormControl>
-                        <FormControl  className="form">
-                            <InputLabel htmlFor="my-input">E-mail</InputLabel>
-                            <Input  id="my-input" type={"text"} aria-describedby="my-helper-text" />
-                        </FormControl>
-                        <br/>
-                        <div id="container">
-                            <div>
-                                <Button className="button"> Add Group </Button>
-                            </div>
+            <MainPage/>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Add Group</title>
+            </Helmet>
+        <main
+            className={clsx(classes.content, {
+                [classes.contentShift]: open,
+            })}
+        >
+            <div className={classes.drawerHeader} />
+            <div className="Login">
+                <header className="Login-header">
+                    <FormControl className="form">
+                        <InputLabel htmlFor="my-input">Group Name</InputLabel>
+                        <Input type={"text"} id="my-input" aria-describedby="my-helper-text" />
+                    </FormControl>
+                    <FormControl  className="form">
+                        <InputLabel htmlFor="my-input">User Name</InputLabel>
+                        <Input type={"text"} id="my-input" aria-describedby="my-helper-text" />
+                    </FormControl>
+                    <FormControl  className="form">
+                        <InputLabel htmlFor="my-input">Password</InputLabel>
+                        <Input  id="my-input" type={"password"} aria-describedby="my-helper-text" />
+                    </FormControl>
+                    <FormControl  className="form">
+                        <InputLabel htmlFor="my-input">E-mail</InputLabel>
+                        <Input  id="my-input" type={"text"} aria-describedby="my-helper-text" />
+                    </FormControl>
+                    <br/>
+                    <div id="container">
+                        <div>
+                            <Button className="button"> Add Group </Button>
                         </div>
-                    </header>
-                </div>
-            </main>
+                    </div>
+                </header>
+            </div>
+        </main>
         </div>
-    );
+    )
 }
